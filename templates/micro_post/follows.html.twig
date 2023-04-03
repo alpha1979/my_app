@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Post frrom people you follow{% endblock %}
+
+{% block bread %}
+    -> People you follow
+{% endblock %}
+
+{% block body %}
+    {{ include('micro_post/_post_tabs.html.twig')}}
+    {{ include('micro_post/_post_list.html.twig')}}
+{% endblock %}

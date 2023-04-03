@@ -1,0 +1,28 @@
+{% if users|length > 0 %}
+    <div class="grid grid-cols-1 gap-4">
+        {% for otheruser in users %}
+            <div class="flex justify-between items-center">
+                <div>
+                    <a href="{{path('app_profile', {id: otheruser.id})}}">
+                        <div class="text-lg">
+                        
+                        {{ otheruser.userProfile.name ?? otheruser.email}}
+                        </div>
+                        <div class="w-full text-center">{{otheruser.email}}</div>
+                    </a>
+                </div>
+                <div>
+                    {{ include('follower/_follow_button.html.twig', {userToFollow: otheruser})}}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    
+{% else %}
+    <div class="w-full text-center">
+        <div class="font-bold text-gray-600">
+
+            Nothing to show
+        </div>
+    </div>
+{% endif %}

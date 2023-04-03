@@ -1,0 +1,6 @@
+{% if profile and profile.image %}
+    <img src="{{ profiles ~ profile.image }}"
+        class="inline-block h-{{size}} w-{{size}} rounded-full ring-2 ring-white">
+{% else %}
+    <div class="inline-block bg-gray-200 rounded-full text-3xl h-{{size}} w-{{size}} ring-white"> </div>
+{% endif %}

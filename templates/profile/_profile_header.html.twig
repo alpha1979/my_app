@@ -1,0 +1,11 @@
+<div class="text-2xl">
+    {{ include('shared/_avatar.html.twig', {'size': 16, profile: user.userProfile}) }}
+    {{ user.userProfile.name ?? user.email }} 
+</div>
+        <div class="text-2xl">{{  user.email }} </div>
+        {{ user.userProfile.bio ?? 'No Bio' }}
+        {{ user.userProfile.dateOfBirth ?? null }}
+        <div class="ml-16 text-2xl">
+            {{ include('follower/_follow_button.html.twig', {userToFollow: user})}}
+        </div>
+</div>

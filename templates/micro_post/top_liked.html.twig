@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}People you topliked{% endblock %}
+{% block bread %}
+    -> Top Liked
+{% endblock %}
+{% block body %}
+    {{ include('micro_post/_post_tabs.html.twig')}}
+    {{ include('micro_post/_post_list.html.twig')}}
+{% endblock %}

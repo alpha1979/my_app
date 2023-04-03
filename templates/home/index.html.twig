@@ -1,0 +1,12 @@
+{% extends "base.html.twig" %}
+{% block title %}Index page{% endblock %}
+{% block body %}
+    <h1>Index page</h1>
+
+    {% for key, message in messages %}
+        <h3>{{message}}</h3>
+        <a href="{{path('app_show_one', {id: key})}}">{{message}}</a>
+    {% endfor %}
+    <br>
+   {{ "-2days"|date("m/d/Y")}}
+{% endblock %}
